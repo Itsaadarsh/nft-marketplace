@@ -8,13 +8,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <nav className='border-b p-6'>
         <p className='text-4xl font-bold'>F500 Marketplace</p>
         <div className='flex mt-4'>
-        <Link href="/">
+          <Link href="/">
             <a className="mr-4 text-green-500">Home</a>
           </Link>
-          <Link href="/create-nft">
+          <Link href="/create-item">
             <a className="mr-6 text-green-500">Sell NFT</a>
           </Link>
-          <Link href="/my-nfts">
+          <Link href="/my-assets">
             <a className="mr-6 text-green-500">My NFTs</a>
           </Link>
           <Link href="/dashboard">
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </div>
   )
-  
+
 }
 
 export default MyApp
