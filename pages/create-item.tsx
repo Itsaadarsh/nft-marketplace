@@ -16,7 +16,7 @@ interface FORMINPUT {
 
 const client = ipfsHttpClient({ url: 'https://ipfs.infura.io:5001/api/v0' })
 
-const createPage: NextPage = () => {
+const CreatePage: NextPage = () => {
     const [fileUrl, setFileUrl] = useState<string | null>(null)
     const [formInput, updateFormInput] = useState<FORMINPUT>({ price: '', name: '', description: '' })
     const router = useRouter()
@@ -110,4 +110,4 @@ const createPage: NextPage = () => {
     )
 }
 
-export default createPage
+export default CreatePage

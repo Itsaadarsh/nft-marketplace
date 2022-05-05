@@ -17,7 +17,7 @@ interface NFTITEM {
     sold: boolean;
 }
 
-const dashboard: NextPage = () => {
+const Dashboard: NextPage = () => {
     const [nfts, setNfts] = useState<NFTITEM[]>([])
     const [sold, setSold] = useState<NFTITEM[]>([])
     const [loadingState, setLoadingState] = useState('not-loaded')
@@ -100,4 +100,4 @@ const dashboard: NextPage = () => {
     )
 }
 
-export default dashboard;
+export default Dashboard;

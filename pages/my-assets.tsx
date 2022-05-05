@@ -17,7 +17,7 @@ interface NFTITEM {
     tokenURI: string;
 }
 
-const myAssets: NextPage = () => {
+const MyAssets: NextPage = () => {
 
     const [nfts, setNfts] = useState<NFTITEM[]>([])
     const [loadingState, setLoadingState] = useState('not-loaded')
@@ -76,4 +76,4 @@ const myAssets: NextPage = () => {
     )
 }
 
-export default myAssets;
+export default MyAssets;
