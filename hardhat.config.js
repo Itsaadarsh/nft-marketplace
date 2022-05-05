@@ -1,7 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-const fs = require('fs');
-const projectId = fs.readFileSync('.projectId').toString();
-const privateKey = fs.readFileSync('.secret').toString();
+require('dotenv').config()
 
 /**
  * @type import('hardhat/config').HardhatUserConfig
@@ -12,14 +10,13 @@ module.exports = {
       chainId: 1337
     },
     mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${projectId}`,
-      accounts: [privateKey]
+      url: `https://polygon-mumbai.infura.io/v3/${process.env.projectId}`,
+      accounts: [process.env.privateKey]
     },
     mainnet: {
-      url: `https://polygon-mainnet.infura.io/v3/${projectId}`,
-      accounts: [privateKey]
+      url: `https://polygon-mainnet.infura.io/v3/${process.env.projectId}`,
+      accounts: [process.env.privateKey]
     }
   },
   solidity: "0.8.4",
 };
- 
